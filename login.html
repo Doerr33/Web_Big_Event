@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>个人博客-登录-注册</title>
+    <!-- link的rel是什么意思 
     
+        这个标签的rel属性用于设置对象和链接目标间的关系，说白了就是指明你链进来的对象是个什么，
+        rel各个属性值配置的意思：
+              Alternate -- 定义交替出现的链接 
+              Stylesheet -- 定义一个外部加载的样式表 
+              Start -- 通知搜索引擎,文档的开始 
+              Next -- 记录文档的下一页.(浏览器可以提前加载此页) 
+              Prev -- 记录文档的上一页.(定义浏览器的后退键) 
+              Contents 
+              Index -- 当前文档的索引 
+              Glossary -- 词汇 
+              Copyright -- 当前文档的版权 
+              Chapter -- 当前文档的章节 
+              Section -- 作为文档的一部分 
+              Subsection -- 作为文档的一小部分 
+              Appendix -- 定义文档的附加信息 
+              Help -- 链接帮助信息 
+              Bookmark -- 书签 
+    -->
+    <link rel="stylesheet" href="/assets/css/login.css" />
+    <!-- 导入layui的样式 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
+</head>
+
+<body>
+    <!-- 头部logo区域 -->
+    <div class="layui-main">
+        <!-- 
+            alt属性是<img>元素的必选属性，它给出了图像的备选文本，供图像无法显示时采用。
+         -->
+        <img src="/assets/images/logo.png" alt="logo" />
+    </div>
+    <div class="loginAndRegBox">
+        <div class="titleBox"></div>
+        <!-- 登录的div -->
+        <div class="login-box">
+
+            <!-- 登录的表单 -->
+            <form class="layui-form" action="">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i> 
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i> 
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 登录按钮 -->
+                <div class="layui-form-item">
+                    <!-- 注意表达那提交按钮和普通按钮的区别，就是lay-commit属性 -->
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登录</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link_reg">去注册账号</a>
+                </div>
+            </form>
+
+        </div>
+        <!-- 注册的div -->
+        <div class="reg-box">
+            <form class="layui-form" action="">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i> 
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i> 
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i> 
+                    <input type="password" name="repassword" required lay-verify="required" placeholder="请确认密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 登录按钮 -->
+                <div class="layui-form-item">
+                    <!-- 注意表达那提交按钮和普通按钮的区别，就是lay-commit属性 -->
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>注册</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link_login">去登录</a>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <!-- 导入jquery -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 导入自己的js -->
+    <script src="/assets/js/login.js"></script>
 </body>
+
 </html>
